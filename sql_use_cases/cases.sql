@@ -1,3 +1,4 @@
+-- No of Data Analyst jobs in Ney York and Remote Jobs around the World
 SELECT
     COUNT (job_id) AS number_of_jobs,
     CASE 
