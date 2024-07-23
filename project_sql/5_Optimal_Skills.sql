@@ -40,7 +40,6 @@ WITH skill_demand AS (
 )
 
 SELECT 
-    avg_salary.skill_id,
     skill_demand.skills,
     demand_count,
     avg_yearly_salary

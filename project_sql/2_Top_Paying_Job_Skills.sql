@@ -1,4 +1,4 @@
-/*Question:  What are the top paying Data Analyst jobs
+/*Question:  What are the top paying skills for Data Analyst jobs
 */
 
 WITH top_paying_jobs AS(
@@ -18,15 +18,19 @@ WITH top_paying_jobs AS(
     LIMIT 10
 )
 SELECT
-    top_paying_jobs.*,
-    skills
+    skills_dim.skills,
+    COUNT(skills_job_dim.skill_id) AS skill_count,
+    ROUND(AVG(top_paying_jobs.salary_year_avg), 0) AS avg_salary
 FROM top_paying_jobs
 INNER JOIN skills_job_dim
 ON top_paying_jobs.job_id= skills_job_dim.job_id
 INNER JOIN skills_dim
 ON skills_job_dim.skill_id = skills_dim.skill_id
+GROUP BY
+    skills_dim.skills
 ORDER BY
-    salary_year_avg DESC
+    skill_count DESC;
+
 
 /*
  The skills that are most frequently associated with high-paying jobs are:
