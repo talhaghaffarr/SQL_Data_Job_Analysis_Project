@@ -1,7 +1,5 @@
-# Introduction
-# Project Title: Analysis of 2023 Job Data Set
+# Analysis of the 2023 Job Data For Data Analyst Roles
 
-## 1. Introduction
 This project aims to uncover valuable insights into the Data Analyst job market for remote positions in 2023. By leveraging PostgreSQL and SQL, I performed various analyses to answer key questions such as identifying the top-paying jobs, the most sought-after skills, and the optimal skills for maximizing job opportunities and salary potential.
 
 Check out the SQL here here in [project_sql folder](/project_sql/)
